@@ -2,7 +2,7 @@ type Author {
 	id: ID!
 	name: String!
 	age: Int
-	book: Book!
+	book: [Book!] @relation
 }
 
 #query used for receive data
@@ -13,5 +13,7 @@ type Query {
 
 #mutation used for modify or create data
 type Mutation {
-	createAuthor(name: String!, age: Int, book: ID!): Author!
+	createAuthor(name: String!, age: Int, book: [ID!]): Author!
+	updateAuthor(id: ID!, name: String, age: Int, book: [ID]): Author!
+	deleteAuthor(id: ID!): Boolean
 }
