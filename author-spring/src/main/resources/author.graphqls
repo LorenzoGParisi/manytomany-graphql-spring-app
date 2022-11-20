@@ -1,0 +1,16 @@
+type Author {
+	id: ID!
+	name: String!
+	age: Int
+}
+
+#query used for receive data
+type Query {
+	findAllAuthors: [Author]!
+	countAuthors: Long!
+}
+
+#mutation used for modify or create data
+type Mutation {
+	createAutohr(name: String!, age: Int): Author!
+}
