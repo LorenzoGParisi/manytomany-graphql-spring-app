@@ -1,4 +1,4 @@
-package com.parisi.model;
+package com.parisi.authorspring.model;
 
 import java.util.List;
 import org.springframework.data.annotation.Id;
@@ -12,6 +12,13 @@ public class Author {
 	private int age;
 	private List<Book> authorBooks;
 	
+	public Author(String name, int age, List<Book> authorBooks) {
+		this.name = name;
+		this.age = age;
+		this.authorBooks = authorBooks;
+	}
+	public Author() {
+	}
 	public Long getId() {
 		return id;
 	}

@@ -1,4 +1,4 @@
-package com.parisi.model;
+package com.parisi.authorspring.model;
 
 import java.util.List;
 
@@ -13,6 +13,13 @@ public class Book {
 	private String description;
 	private List<Author> author;
 	
+	public Book(String title, String description, List<Author> author) {
+		this.title = title;
+		this.description = description;
+		this.author = author;
+	}
+	public Book() {
+	}
 	public Long getId() {
 		return id;
 	}
