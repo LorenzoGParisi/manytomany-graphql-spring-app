@@ -2,6 +2,7 @@ type Author {
 	id: ID!
 	name: String!
 	age: Int
+	book: Book!
 }
 
 #query used for receive data
@@ -12,5 +13,5 @@ type Query {
 
 #mutation used for modify or create data
 type Mutation {
-	createAutohr(name: String!, age: Int): Author!
+	createAuthor(name: String!, age: Int, book: ID!): Author!
 }
