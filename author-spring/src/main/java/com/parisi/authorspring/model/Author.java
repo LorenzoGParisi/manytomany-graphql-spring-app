@@ -15,10 +15,12 @@ public class Author {
 	public Author(String name, int age, List<Book> authorBooks) {
 		this.name = name;
 		this.age = age;
-		this.authorBooks = authorBooks;
 	}
 	public Author() {
 	}
+	public Author(Long id) {
+		this.id = id;
+	}	
 	public Long getId() {
 		return id;
 	}

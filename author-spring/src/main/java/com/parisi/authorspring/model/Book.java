@@ -16,7 +16,6 @@ public class Book {
 	public Book(String title, String description, List<Author> author) {
 		this.title = title;
 		this.description = description;
-		this.author = author;
 	}
 	public Book() {
 	}
